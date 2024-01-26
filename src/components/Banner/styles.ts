@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-import bannerImg from '../../assets/images/banner-homem-aranha.png'
 
 export const Imagem = styled.div`
   display: block;
-  background-image: url(${bannerImg});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
