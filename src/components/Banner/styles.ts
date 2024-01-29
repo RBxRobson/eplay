@@ -12,6 +12,9 @@ export const Imagem = styled.div`
   .container {
     padding-top: 340px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   //* Posicionando a tag no topo do container
