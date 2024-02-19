@@ -3,6 +3,8 @@ import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
 
+import hogwards from '../../assets/images/image 8.png'
+
 const Product = () => {
   const { id } = useParams()
 
@@ -35,9 +37,7 @@ const Product = () => {
           jogo.
         </p>
       </Section>
-      <Section title="Galeria" background="black">
-        <Gallery />
-      </Section>
+      <Gallery defaultCover={hogwards} name="Hogwards" />
     </>
   )
 }
