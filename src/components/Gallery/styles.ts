@@ -22,6 +22,7 @@ export const Item = styled.li`
   position: relative;
   margin-right: 16px;
   transition: opacity 0.5s ease;
+  cursor: pointer;
 
   > img {
     border: 2px solid ${cores.branca};
@@ -46,9 +47,13 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+
+  &.visible {
+    display: flex;
+  }
 
   .overlay {
     position: absolute;
@@ -75,10 +80,20 @@ export const ModalContent = styled.div`
       font-size: 18px;
       font-weight: bold;
     }
+
+    img {
+      cursor: pointer;
+    }
   }
 
-  img {
+  img,
+  iframe {
     display: block;
     max-width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 480px;
   }
 `
