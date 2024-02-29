@@ -6,7 +6,7 @@ import { formatPrice } from '../ProductList'
 import { useGetFeaturedGameQuery } from '../../services/api'
 
 const Banner = () => {
-  const { data: game, isLoading } = useGetFeaturedGameQuery()
+  const { data: game } = useGetFeaturedGameQuery()
 
   if (!game) {
     return <h3>Carregando...</h3>
