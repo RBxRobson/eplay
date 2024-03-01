@@ -18,15 +18,36 @@ const Categorys = () => {
   if (actionGames && rpgGames && figthGames && sportsGames && simulationGames) {
     return (
       <>
-        <ProductList games={actionGames} title="Ação" background={'black'} />
-        <ProductList games={sportsGames} title="Esportes" background={'gray'} />
+        <ProductList
+          games={actionGames}
+          title="Ação"
+          background={'black'}
+          id="action"
+        />
+        <ProductList
+          games={sportsGames}
+          title="Esportes"
+          background={'gray'}
+          id="sports"
+        />
         <ProductList
           games={simulationGames}
           title="Simulação"
           background={'black'}
+          id="simulation"
         />
-        <ProductList games={rpgGames} title="RPG" background={'gray'} />
-        <ProductList games={figthGames} title="Luta" background={'black'} />
+        <ProductList
+          games={rpgGames}
+          title="RPG"
+          background={'gray'}
+          id="rpg"
+        />
+        <ProductList
+          games={figthGames}
+          title="Luta"
+          background={'black'}
+          id="fight"
+        />
       </>
     )
   }

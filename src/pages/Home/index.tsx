@@ -47,11 +47,13 @@ const Home = () => {
             games={promotions}
             title="Promoções"
             background={'gray'}
+            id="on-sale"
           />
           <ProductList
             games={comingSoon}
             title="Em Breve"
             background={'black'}
+            id="coming-soon"
           />
         </>
       ) : (
