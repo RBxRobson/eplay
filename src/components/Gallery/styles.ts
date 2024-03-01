@@ -1,8 +1,12 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    overflow-x: scroll;
+  }
 `
 
 export const Action = styled.div`
