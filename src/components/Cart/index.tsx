@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import Button from '../Button'
 import Tag from '../Tag'
-import img from '../../assets/images/zelda.png'
 
 import { RootReducer } from '../../store/index'
 import { close, remove } from '../../store/reducers/cart'
