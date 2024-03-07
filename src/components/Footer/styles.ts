@@ -7,6 +7,7 @@ export const Container = styled.footer`
   font-size: 14px;
   padding: 32px 0;
   background-color: ${cores.cinza};
+  margin-top: 40px;
 `
 
 export const SectionTitle = styled.h4`

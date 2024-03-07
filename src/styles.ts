@@ -37,4 +37,8 @@ export const GlobalCss = createGlobalStyle`
       max-width: 80%;
     }
   }
+
+  button {
+    cursor: pointer;
+  }
 `

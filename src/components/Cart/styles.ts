@@ -77,9 +77,6 @@ export const CartItem = styled.li`
     object-fit: cover;
   }
 
-  div {
-  }
-
   h3 {
     font-size: 16px;
     font-weight: bold;
