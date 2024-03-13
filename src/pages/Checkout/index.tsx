@@ -9,9 +9,11 @@ import boleto from '../../assets/images/barcode 1.png'
 import cartao from '../../assets/images/credit-card 1.png'
 
 import { InputGroup, Row, TabButton } from './styles'
+import { usePurchaseMutation } from '../../services/api'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
+  const [purchase, { isLoading, isError, data }] = usePurchaseMutation()
 
   const form = useFormik({
     initialValues: {
@@ -72,7 +74,34 @@ const Checkout = () => {
       )
     }),
     onSubmit: (values) => {
-      console.log(values)
+      purchase({
+        billing: {
+          name: values.fullName,
+          email: values.email,
+          document: values.cpf
+        },
+        delivery: {
+          email: values.deliveryEmail
+        },
+        payment: {
+          card: {
+            active: payWithCard,
+            owner: {
+              name: values.cardOwner,
+              document: values.cpfCard
+            },
+            name: values.cardName,
+            number: values.cardNumber,
+            expires: {
+              month: Number(values.expiredMonth),
+              year: Number(values.expiredYear)
+            },
+            code: Number(values.cvv)
+          },
+          installments: 1
+        },
+        products: []
+      })
     }
   })
 
@@ -211,7 +240,7 @@ const Checkout = () => {
                     </small>
                   </InputGroup>
                 </Row>
-                <Row>
+                <Row marginTop="24px">
                   <InputGroup>
                     <label htmlFor="cardName">Nome do cartão</label>
                     <input
