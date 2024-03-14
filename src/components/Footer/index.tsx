@@ -10,19 +10,44 @@ const Footer = () => {
           <S.SectionTitle>Categorias</S.SectionTitle>
           <S.Links>
             <li>
-              <S.Link to="/categories#rpg">RPG</S.Link>
+              <S.Link
+                title="Clique aqui para acessar jogos de RPG"
+                to="/categories#rpg"
+              >
+                RPG
+              </S.Link>
             </li>
             <li>
-              <S.Link to="/categories#action">Ação</S.Link>
+              <S.Link
+                title="Clique aqui para acessar jogos de ação"
+                to="/categories#action"
+              >
+                Ação
+              </S.Link>
             </li>
             <li>
-              <S.Link to="/categories#fight">Luta</S.Link>
+              <S.Link
+                title="Clique aqui para acessar jogos de luta"
+                to="/categories#fight"
+              >
+                Luta
+              </S.Link>
             </li>
             <li>
-              <S.Link to="/categories#sports">Esportes</S.Link>
+              <S.Link
+                title="Clique aqui para acessar jogos de esportes"
+                to="/categories#sports"
+              >
+                Esportes
+              </S.Link>
             </li>
             <li>
-              <S.Link to="/categories#simulation">Simulação</S.Link>
+              <S.Link
+                title="Clique aqui para acessar jogos de simulação"
+                to="/categories#simulation"
+              >
+                Simulação
+              </S.Link>
             </li>
           </S.Links>
         </S.FooterSection>
@@ -30,10 +55,28 @@ const Footer = () => {
           <S.SectionTitle>Acesso Rápido</S.SectionTitle>
           <S.Links>
             <li>
-              <S.Link to="/#on-sale">Promoções</S.Link>
+              <S.Link
+                title="Clique aqui para acessar a sessão de promoções"
+                to="/categories"
+              >
+                Categorias
+              </S.Link>
             </li>
             <li>
-              <S.Link to="/#coming-soon">Em breve</S.Link>
+              <S.Link
+                title="Clique aqui para acessar a sessão de em breve"
+                to="/#coming-soon"
+              >
+                Em breve
+              </S.Link>
+            </li>
+            <li>
+              <S.Link
+                title="Clique aqui para acessar a sessão de promoções"
+                to="/#on-sale"
+              >
+                Promoções
+              </S.Link>
             </li>
           </S.Links>
         </S.FooterSection>
