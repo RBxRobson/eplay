@@ -1,12 +1,12 @@
-import hogwards from '../../assets/images/image 8.png'
+import { useState } from 'react'
+
 import fechar from '../../assets/images/close 1.png'
-import zelda from '../../assets/images/zelda.png'
 import zoom from '../../assets/images/mais-zoom 1.png'
 import play from '../../assets/images/botao-play 1.png'
-import { Action, Item, Items, Modal, ModalContent } from './styles'
 import Section from '../Section'
-import { useState } from 'react'
 import { GalleryItem } from '../../pages/Home'
+
+import { Action, Item, Items, Modal, ModalContent } from './styles'
 
 type Props = {
   defaultCover: string

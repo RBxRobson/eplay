@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.svg'
 import carrinho from '../../assets/images/carrinho.svg'
 
+import { Link } from '../Footer/styles'
 import { open } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
 
@@ -43,13 +43,31 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to="/categories">Categorias</Link>
+                <Link
+                  to="/categories"
+                  title="Clique aqui para acessar a sessão de categorias"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Categorias
+                </Link>
               </LinkItem>
               <LinkItem>
-                <Link to="/#on-sale">Novidades</Link>
+                <Link
+                  to="/#coming-soon"
+                  title="Clique aqui para acessar a sessão de em breve"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Novidades
+                </Link>
               </LinkItem>
               <LinkItem>
-                <Link to="/#coming-soon">Promoções</Link>
+                <Link
+                  to="/#on-sale"
+                  title="Clique aqui para acessar a sessão de promoções"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Promoções
+                </Link>
               </LinkItem>
             </Links>
           </nav>
@@ -62,13 +80,31 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <Links>
           <LinkItem>
-            <Link to="/categories">Categorias</Link>
+            <Link
+              to="/categories"
+              title="Clique aqui para acessar a sessão de categorias"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categorias
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link to="/#on-sale">Novidades</Link>
+            <Link
+              to="/#coming-soon"
+              title="Clique aqui para acessar a sessão de em breve"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Novidades
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link to="/#coming-soon">Promoções</Link>
+            <Link
+              to="/#on-sale"
+              title="Clique aqui para acessar a sessão de promoções"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Promoções
+            </Link>
           </LinkItem>
         </Links>
       </NavMobile>
