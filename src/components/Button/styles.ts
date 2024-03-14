@@ -6,6 +6,7 @@ import { cores } from '../../styles'
 import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
+  cursor: pointer;
   background-color: ${(props) =>
     props.variant === 'primary' ? cores.verde : 'transparent'};
   border: 2px solid

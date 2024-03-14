@@ -2,7 +2,7 @@ import { ButtonContainer, ButtonLink } from './styles'
 
 //* Criando uma tipagem para reutilizar o componente
 export type Props = {
-  type: 'button' | 'link'
+  type: 'button' | 'link' | 'submit'
   title: string
   //* Endereço para caso de link
   to?: string
