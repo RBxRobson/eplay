@@ -26,7 +26,7 @@ export const Item = styled.li`
   position: relative;
   margin-right: 16px;
   transition: opacity 0.5s ease;
-  cursor: pointer;
+  cursor: zoom-in;
 
   > img {
     border: 2px solid ${cores.branca};
