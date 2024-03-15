@@ -23,7 +23,7 @@ export const Links = styled.ul`
 `
 
 export const Link = styled(HashLink)`
-  color: ${colors.grayClaro};
+  color: ${colors.lightGray};
   text-decoration: none;
 `
 

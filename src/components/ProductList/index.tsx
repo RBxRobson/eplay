@@ -1,5 +1,5 @@
 import { Game } from '../../pages/Home'
-import { parceToBrl } from '../../utils'
+import { parseToBrl } from '../../utils'
 import Product from '../Product'
 
 import * as S from './styles'
@@ -24,7 +24,7 @@ const ProductList = ({ title, background, games, id }: Props) => {
     }
 
     if (game.prices.current) {
-      tags.push(parceToBrl(game.prices.current))
+      tags.push(parseToBrl(game.prices.current))
     }
 
     return tags
