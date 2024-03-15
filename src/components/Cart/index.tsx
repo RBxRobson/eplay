@@ -5,7 +5,7 @@ import Tag from '../Tag'
 
 import { RootReducer } from '../../store/index'
 import { close, remove } from '../../store/reducers/cart'
-import { formatPrice } from '../ProductList'
+import { parceToBrl } from '../../utils'
 
 import * as S from './styles'
 
@@ -40,7 +40,7 @@ const Cart = () => {
                 <h3>{item.name}</h3>
                 <Tag>{item.details.category}</Tag>
                 <Tag>{item.details.system}</Tag>
-                <span>{formatPrice(item.prices.current)}</span>
+                <span>{parceToBrl(item.prices.current)}</span>
               </div>
               <button onClick={() => removeItem(item.id)} type="button" />
             </S.CartItem>
@@ -48,7 +48,7 @@ const Cart = () => {
         </ul>
         <S.Quantity>{items.length} jogo(s) no carrinho</S.Quantity>
         <S.Prices>
-          Total de {formatPrice(getTotalPrice())}
+          Total de {parceToBrl(getTotalPrice())}
           <span>Em até sem juros</span>
         </S.Prices>
         <Button title="Clique aqui para continuar com a compra" type="button">

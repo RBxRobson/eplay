@@ -2,22 +2,13 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import logo from '../../assets/images/logo.svg'
-import carrinho from '../../assets/images/carrinho.svg'
+import cart from '../../assets/images/carrinho.svg'
 
 import { Link } from '../Footer/styles'
 import { open } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
 
-import {
-  HeaderBar,
-  Links,
-  LinkItem,
-  CartButton,
-  Logo,
-  Hamburguer,
-  HeaderRow,
-  NavMobile
-} from './style'
+import * as S from './style'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -29,20 +20,20 @@ const Header = () => {
   }
 
   return (
-    <HeaderBar>
-      <HeaderRow>
+    <S.HeaderBar>
+      <S.HeaderRow>
         <div>
-          <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <S.Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span />
             <span />
             <span />
-          </Hamburguer>
+          </S.Hamburguer>
           <Link to="/">
-            <Logo src={logo} alt="eplay" />
+            <S.Logo src={logo} alt="eplay" />
           </Link>
           <nav>
-            <Links>
-              <LinkItem>
+            <S.Links>
+              <S.LinkItem>
                 <Link
                   to="/categories"
                   title="Clique aqui para acessar a sessão de categorias"
@@ -50,8 +41,8 @@ const Header = () => {
                 >
                   Categorias
                 </Link>
-              </LinkItem>
-              <LinkItem>
+              </S.LinkItem>
+              <S.LinkItem>
                 <Link
                   to="/#coming-soon"
                   title="Clique aqui para acessar a sessão de em breve"
@@ -59,8 +50,8 @@ const Header = () => {
                 >
                   Novidades
                 </Link>
-              </LinkItem>
-              <LinkItem>
+              </S.LinkItem>
+              <S.LinkItem>
                 <Link
                   to="/#on-sale"
                   title="Clique aqui para acessar a sessão de promoções"
@@ -68,18 +59,18 @@ const Header = () => {
                 >
                   Promoções
                 </Link>
-              </LinkItem>
-            </Links>
+              </S.LinkItem>
+            </S.Links>
           </nav>
         </div>
-        <CartButton onClick={() => openCart()}>
+        <S.CartButton onClick={() => openCart()}>
           {items.length} <span> - produto(s)</span>
-          <img src={carrinho} alt="carrinho" />
-        </CartButton>
-      </HeaderRow>
-      <NavMobile className={isMenuOpen ? 'is-open' : ''}>
-        <Links>
-          <LinkItem>
+          <img src={cart} alt="carrinho" />
+        </S.CartButton>
+      </S.HeaderRow>
+      <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
+        <S.Links>
+          <S.LinkItem>
             <Link
               to="/categories"
               title="Clique aqui para acessar a sessão de categorias"
@@ -87,8 +78,8 @@ const Header = () => {
             >
               Categorias
             </Link>
-          </LinkItem>
-          <LinkItem>
+          </S.LinkItem>
+          <S.LinkItem>
             <Link
               to="/#coming-soon"
               title="Clique aqui para acessar a sessão de em breve"
@@ -96,8 +87,8 @@ const Header = () => {
             >
               Novidades
             </Link>
-          </LinkItem>
-          <LinkItem>
+          </S.LinkItem>
+          <S.LinkItem>
             <Link
               to="/#on-sale"
               title="Clique aqui para acessar a sessão de promoções"
@@ -105,10 +96,10 @@ const Header = () => {
             >
               Promoções
             </Link>
-          </LinkItem>
-        </Links>
-      </NavMobile>
-    </HeaderBar>
+          </S.LinkItem>
+        </S.Links>
+      </S.NavMobile>
+    </S.HeaderBar>
   )
 }
 
