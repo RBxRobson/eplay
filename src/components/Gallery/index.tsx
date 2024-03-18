@@ -4,7 +4,6 @@ import close from '../../assets/images/close 1.png'
 import zoom from '../../assets/images/mais-zoom 1.png'
 import play from '../../assets/images/botao-play 1.png'
 import Section from '../Section'
-import { GalleryItem } from '../../pages/Home'
 
 import * as S from './styles'
 
