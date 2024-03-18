@@ -41,4 +41,8 @@ export const GlobalCss = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .margin-top {
+    margin-top: 16px;
+  }
 `

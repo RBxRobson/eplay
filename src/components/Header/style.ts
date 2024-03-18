@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
 
 export const Links = styled.ul`
@@ -17,7 +17,8 @@ export const HeaderBar = styled.header`
   border-radius: 16px;
   margin-bottom: 80px;
 
-  a {
+  a,
+  span {
     color: ${colors.white};
     text-decoration: none;
     font-weight: bold;
@@ -25,6 +26,10 @@ export const HeaderBar = styled.header`
 
   @media (max-width: ${breakpoints.tablet}) {
     padding-bottom: 0;
+  }
+
+  h1 {
+    line-height: 0;
   }
 `
 
@@ -62,8 +67,9 @@ export const NavMobile = styled.nav`
   }
 `
 
-export const CartButton = styled.a`
+export const CartButton = styled.span`
   display: flex;
+  cursor: pointer;
 
   @media (max-width: ${breakpoints.tablet}) {
     span {
@@ -72,8 +78,7 @@ export const CartButton = styled.a`
   }
 
   img {
-    margin-left: 8px;
-    cursor: pointer;
+    margin-left: 16px;
   }
 `
 
